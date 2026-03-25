@@ -71,187 +71,99 @@ venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
 
-🚀 How to Run
-# Step 1: Generate dataset
-python src/data_generator.py
-
-# Step 2: Train model
-python src/train_model.py
-
-# Step 3: Run application
-python main.py
-
-📖 Usage
-
-When you run the program, you will see:
-1. Predict Traffic
-2. What-if Analysis
-3. Find Best Time
-4. Peak Hours
-5. Exit
-
-🔹 Predict Traffic
-
-Enter:
-	•	Time (0–23)
-	•	Day (Monday–Sunday)
-	•	Weather (Clear, Rain, Cloudy, etc.)
-
-🔹 What-if Analysis
-
-Compare traffic for different times
-
-🔹 Find Best Time
-
-Get least traffic time for a day
-
-🔹 Peak Hours
-
-View high congestion periods
-
-⸻
-
-📊 Example Output
-========================================================
-
-📊 TRAFFIC PREDICTION RESULT
-
-========================================================
-
-Travel Time: 5 PM (17:00)
-Day: Friday
-Weather: Clear
-
-Traffic Score: 78.3 / 100
-Traffic Level: HIGH 🔴
-
-Recommendation:
-Heavy traffic expected. Consider traveling after 8 PM.
-
-Peak Hours:
-16:00 - 19:00
-
-========================================================
-🏗️ Project Structure
-traffic-prediction-system/
-│
-├── data/
-│   └── traffic_data.csv
-│
-├── models/
-│   ├── traffic_model.pkl
-│   ├── weather_encoder.pkl
-│   └── day_mapping.pkl
-│
-├── src/
-│   ├── data_generator.py
-│   ├── train_model.py
-│   ├── predict.py
-│   └── utils.py
-│
-├── main.py
-├── requirements.txt
-├── README.md
-└── LICENSE
-
-🔧 Technology Stack
-	•	Python
-	•	Scikit-learn
-	•	Pandas
-	•	NumPy
-	•	Joblib
-
-⸻
-
-🧠 How It Works
-
-Data Logic
-
-Traffic data is generated based on:
-	•	Time-based patterns (rush hours)
-	•	Day variations (weekday/weekend)
-	•	Weather conditions
-
-Machine Learning Model
-	•	Algorithm: Random Forest Regressor
-	•	Trees: 100
-	•	Features:
-	•	Hour
-	•	Day
-	•	Weather
-	•	Hour_sin
-	•	Hour_cos
-
-⸻
-
-📊 Model Performance
-	•	Accuracy: ~99%
-	•	MAE: ~2.2
-	•	R² Score: ~0.98
-	•	Prediction time: < 0.01 sec
-
-⸻
-
-🧪 Requirements
-pandas>=2.2
-numpy>=1.26
-scikit-learn>=1.4
-joblib>=1.3
-🔮 Future Scope
-	•	🌐 Web application (React + Node.js)
-	•	📍 GPS-based prediction
-	•	☁️ Live weather API integration
-	•	🗺️ Traffic heatmap visualization
-	•	📱 Mobile application
-	•	🤖 Deep learning models (LSTM)
-
-⸻
-
-👨‍💻 Author
-
-Shubh Gupta
-
-GitHub: https://github.com/YOUR_USERNAME
-LinkedIn: https://linkedin.com/in/YOUR_PROFILE
-📝 License
-
-This project is licensed under the MIT License.
-
-⸻
-
-⭐ Project Insight
-
-This project focuses on predictive traffic intelligence rather than reactive systems. It helps users make decisions before traveling, reducing congestion and improving efficiency.
-
-⸻
-
-🎤 Viva Line (IMPORTANT)
-
-“This system uses machine learning to predict traffic proactively, enabling users to plan their travel in advance instead of reacting to real-time congestion.”
-
-⸻
-
-📌 Status
-
-✅ Completed
-🔄 Web version planned
-
-⸻
-
-Made with ❤️ for smarter cities 🚗
----
-
-# ✅ Now THIS is:
-- Fully continuous ✔  
-- No breaks ✔  
-- Copy → Paste → Done ✔  
-- Perfect for submission ✔  
+## 🚀 How to Run
+- Step 1: Generate dataset → `python src/data_generator.py`
+- Step 2: Train model → `python src/train_model.py`
+- Step 3: Run app → `python main.py`
 
 ---
 
-If you want to go **next level (this will seriously impress your professor)**:
+## 📖 Usage
+When you run the program:
+1. Predict Traffic  
+2. What-if Analysis  
+3. Find Best Time  
+4. Peak Hours  
+5. Exit  
 
-👉 Add UI + graphs + deploy live  
-👉 I can convert this into **full web app (MERN + ML)**  
+**Predict Traffic:** Enter time (0–23), day, and weather 
+**What-if Analysis:** Compare different travel times  
+**Find Best Time:** Get least congested time  
+**Peak Hours:** View high traffic periods  
 
-Just say: **“make it web app”** 🚀
+---
+
+## 📊 Example Output
+========================================================  
+📊 TRAFFIC PREDICTION RESULT  
+========================================================  
+Travel Time: 5 PM (17:00)  
+Day: Friday  
+Weather: Clear  
+
+Traffic Score: 78.3 / 100  
+Traffic Level: HIGH 🔴  
+
+Recommendation: Avoid traveling between 4 PM – 7 PM  
+Peak Hours: 16:00 - 19:00  
+========================================================  
+
+---
+
+## 🏗️ Project Structure
+traffic-prediction-system/  
+│  
+├── data/  
+├── models/  
+├── src/  
+├── main.py  
+├── requirements.txt  
+└── README.md  
+
+---
+
+## 🔧 Technology Stack
+Python, Scikit-learn, Pandas, NumPy, Joblib  
+
+---
+
+## 🧠 How It Works
+Synthetic data → Feature encoding → Train Random Forest → Predict traffic  
+
+---
+
+## 📊 Model Performance
+Accuracy ~99% | MAE ~2.2 | R² ~0.98 | Fast prediction  
+
+---
+
+## 🧪 Requirements
+pandas>=2.2  
+numpy>=1.26  
+scikit-learn>=1.4  
+joblib>=1.3  
+
+---
+
+## 🔮 Future Scope
+Web app, Live APIs, Heatmaps, Mobile app  
+
+---
+
+## 👨‍💻 Author
+Shubh Gupta  
+GitHub: https://github.com/YOUR_USERNAME  
+
+---
+
+## 🎤 Viva Line
+“This system predicts traffic proactively using machine learning.”  
+
+---
+
+## 📌 Status
+Completed  
+
+---
+
+Made with ❤️ 🚗
