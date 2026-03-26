@@ -243,7 +243,7 @@ joblib>=1.3
 ## 👨‍💻 Author
 ```text
 Shubh Gupta
-GitHub: https://github.com/YOUR_USERNAME
+GitHub: https://github.com/Shubh16Gupta
 ```
 
 ---
