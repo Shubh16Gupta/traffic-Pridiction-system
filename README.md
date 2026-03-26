@@ -5,12 +5,11 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-An intelligent machine learning system that predicts urban traffic congestion based on **time, day, and weather conditions**. This project uses Machine Learning to help users make smarter travel decisions by forecasting traffic before they travel.
+An intelligent machine learning system that predicts urban traffic congestion based on **time, day, and weather conditions**. It helps users make smarter travel decisions by forecasting traffic before they begin their journey.
 
 ---
 
 ## 📌 Table of Contents
-
 - Features  
 - Traffic Categories  
 - Prerequisites  
@@ -22,6 +21,8 @@ An intelligent machine learning system that predicts urban traffic congestion ba
 - Technology Stack  
 - How It Works  
 - Model Performance  
+- Dataset  
+- Requirements  
 - Future Scope  
 - Author  
 - License  
@@ -29,10 +30,9 @@ An intelligent machine learning system that predicts urban traffic congestion ba
 ---
 
 ## 🌟 Features
-
 - 🚗 Traffic prediction (0–100 score)  
 - 📊 Traffic level classification (Low / Medium / High)  
-- 🔁 What-if analysis (compare different times)  
+- 🔁 What-if analysis  
 - ⏰ Peak hour detection  
 - 💡 Smart travel recommendations  
 - ⚡ Fast predictions using Random Forest  
@@ -40,7 +40,6 @@ An intelligent machine learning system that predicts urban traffic congestion ba
 ---
 
 ## 🎯 Traffic Categories
-
 | Score | Level | Meaning |
 |------|------|--------|
 | 0–30 | 🟢 Low | Smooth traffic |
@@ -50,15 +49,15 @@ An intelligent machine learning system that predicts urban traffic congestion ba
 ---
 
 ## 📋 Prerequisites
-
-- Python **3.10 or 3.11 recommended**
-- pip installed
-- Git
+```text
+Python 3.10 or 3.11
+pip
+Git
+```
 
 ---
 
 ## ⚙️ Installation
-
 ```bash
 git clone https://github.com/YOUR_USERNAME/traffic-prediction-system.git
 cd traffic-prediction-system
@@ -70,100 +69,208 @@ source venv/bin/activate      # Mac/Linux
 venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
+```
+
+---
 
 ## 🚀 How to Run
-- Step 1: Generate dataset → `python src/data_generator.py`
-- Step 2: Train model → `python src/train_model.py`
-- Step 3: Run app → `python main.py`
+```bash
+python src/data_generator.py
+python src/train_model.py
+python main.py
+```
 
 ---
 
 ## 📖 Usage
-When you run the program:
-1. Predict Traffic  
-2. What-if Analysis  
-3. Find Best Time  
-4. Peak Hours  
-5. Exit  
+```text
+1. Predict Traffic
+2. What-if Analysis
+3. Find Best Time
+4. Peak Hours
+5. Exit
+```
 
-**Predict Traffic:** Enter time (0–23), day, and weather 
-**What-if Analysis:** Compare different travel times  
-**Find Best Time:** Get least congested time  
-**Peak Hours:** View high traffic periods  
+**Predict Traffic**
+```text
+Input:
+- Time (0–23)
+- Day (Monday–Sunday)
+- Weather (Clear, Rain, Cloudy)
+
+Output:
+- Traffic Score
+- Traffic Level
+- Recommendation
+```
+
+**What-if Analysis**
+```text
+Compare traffic across different times.
+```
+
+**Find Best Time**
+```text
+Suggests least congested time.
+```
+
+**Peak Hours**
+```text
+Displays high traffic time ranges.
+```
 
 ---
 
 ## 📊 Example Output
-========================================================  
-📊 TRAFFIC PREDICTION RESULT  
-========================================================  
-Travel Time: 5 PM (17:00)  
-Day: Friday  
-Weather: Clear  
+```text
+========================================================
+📊 TRAFFIC PREDICTION RESULT
+========================================================
 
-Traffic Score: 78.3 / 100  
-Traffic Level: HIGH 🔴  
+Travel Time: 5 PM (17:00)
+Day: Friday
+Weather: Clear
 
-Recommendation: Avoid traveling between 4 PM – 7 PM  
-Peak Hours: 16:00 - 19:00  
-========================================================  
+Traffic Score: 78.3 / 100
+Traffic Level: HIGH 🔴
+
+Recommendation:
+Avoid traveling between 4 PM – 7 PM
+
+Peak Hours:
+16:00 - 19:00
+
+========================================================
+```
 
 ---
 
 ## 🏗️ Project Structure
-traffic-prediction-system/  
-│  
-├── data/  
-├── models/  
-├── src/  
-├── main.py  
-├── requirements.txt  
-└── README.md  
+```text
+traffic-prediction-system/
+│
+├── data/
+│   └── traffic_data.csv
+│
+├── models/
+│   └── traffic_model.pkl
+│
+├── src/
+│   ├── data_generator.py
+│   ├── train_model.py
+│   ├── predict.py
+│   └── utils.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
+```
 
 ---
 
 ## 🔧 Technology Stack
-Python, Scikit-learn, Pandas, NumPy, Joblib  
+```text
+Python
+Scikit-learn
+Pandas
+NumPy
+Joblib
+```
 
 ---
 
 ## 🧠 How It Works
-Synthetic data → Feature encoding → Train Random Forest → Predict traffic  
+```text
+1. Generate synthetic dataset
+2. Encode features (time, day, weather)
+3. Train Random Forest model
+4. Take user input
+5. Predict traffic score and category
+```
 
 ---
 
 ## 📊 Model Performance
-Accuracy ~99% | MAE ~2.2 | R² ~0.98 | Fast prediction  
+```text
+Accuracy: ~99%
+MAE: ~2.2
+R² Score: ~0.98
+Prediction Time: < 0.01 sec
+```
+
+---
+
+## 📂 Dataset
+```text
+Type: Synthetic Dataset
+
+Features:
+- Hour
+- Day
+- Weather
+- Traffic Score
+
+Logic:
+- Rush hours increase traffic
+- Weekends reduce congestion
+- Weather impacts traffic
+```
 
 ---
 
 ## 🧪 Requirements
-pandas>=2.2  
-numpy>=1.26  
-scikit-learn>=1.4  
-joblib>=1.3  
+```text
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+joblib>=1.3
+```
 
 ---
 
 ## 🔮 Future Scope
-Web app, Live APIs, Heatmaps, Mobile app  
+```text
+- Web application (React + Node.js)
+- Real-time traffic API
+- Weather API integration
+- Traffic heatmaps
+- Mobile application
+- Deep learning models (LSTM)
+```
 
 ---
 
 ## 👨‍💻 Author
-Shubh Gupta  
-GitHub: https://github.com/YOUR_USERNAME  
+```text
+Shubh Gupta
+GitHub: https://github.com/YOUR_USERNAME
+```
+
+---
+
+## 📝 License
+```text
+MIT License
+```
 
 ---
 
 ## 🎤 Viva Line
-“This system predicts traffic proactively using machine learning.”  
+```text
+This system predicts traffic proactively using machine learning, helping users plan travel efficiently.
+```
 
 ---
 
 ## 📌 Status
-Completed  
+```text
+Completed
+Web version planned
+```
 
 ---
 
-Made with ❤️ 🚗
+## ❤️
+```text
+Made with ❤️ for smarter cities 🚗
+```
